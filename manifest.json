@@ -1,7 +1,7 @@
 {
   "name": "Disable Polymer",
   "version": "1.0",
-  "description": "Restores the old, pre-Material Design YouTube layout.",
+  "description": "Allows you to switch to the old classic YouTube layout.",
   "permissions": ["storage", "tabs", "webNavigation"],
   "background": {
     "scripts": ["background.js"],
