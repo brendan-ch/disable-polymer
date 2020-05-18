@@ -9,8 +9,13 @@ chrome.runtime.onInstalled.addListener(function() {
 
 let isRunning = true;
 
+chrome.storage.sync.get("running", function(data) {
+  console.log("isRunning", data.running);
+  isRunning = data.running;
+});
+
 chrome.storage.onChanged.addListener(function(changes, namespace) {
-  console.log(changes['running'].newValue);
+  console.log("isRunning", changes['running'].newValue);
   isRunning = changes['running'].newValue;
 });
 
