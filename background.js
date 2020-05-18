@@ -17,7 +17,7 @@ chrome.storage.onChanged.addListener(function(changes, namespace) {
 });
 
 chrome.webNavigation.onBeforeNavigate.addListener(function(details) {  // changes URL before render (way faster)
-  if (isRunning && details.url.startsWith("https://www.youtube.com") && !details.url.endsWith("disable_polymer=1")) {
+  if (isRunning && details.url.startsWith("https://www.youtube.com") && !details.url.endsWith("disable_polymer=1") && !details.url.startsWith("https://www.youtube.com/embed")) {
     let myUrl = details.url.indexOf("?") > -1 ? details.url.concat("&disable_polymer=1") : details.url.concat("?disable_polymer=1");
     chrome.tabs.update(details.tabId, {url: myUrl});
   }
