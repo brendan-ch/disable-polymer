@@ -1,6 +1,6 @@
 # Disable Polymer
 
-A simple Chrome extension that restores the old classic YouTube layout.
+A simple Chrome extension that lets you restore the old classic YouTube layout.
 
 ## Why?
 
