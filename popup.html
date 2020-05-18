@@ -4,30 +4,52 @@
   <head>
     <style>
       body {
-        height: 50px;
+        height: 120px;
         width: 200px;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         display: flex;
         flex-direction: row;
+        margin: 2px;
+      }
+      img {
+        height: 90px;
+        width: 89px;
+        object-fit: cover;
+        margin-left: 1px; /* for some reason it won't look center unless I do this */
       }
       button {
-        height: 50px;
-        width: 130px;
-        background-color: #ff0000;
-        color: white;
+        height: 115px;
+        width: 95px;
+        background-color: white;
         padding: 0;
         border: none;
+        outline: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
       button:hover {
-        background-color: #fd6c6c;
+        background-color: #e6e6e6;
         cursor: pointer;
+      }
+      p {
+        color: black;
+        padding: 0px;
+        margin: 5px 0px 0px 0px;
       }
     </style>
   </head>
   <body>
-    <p id="text">This extension is currently running.</p>
-    <button id="toggleButton">Turn off</button>
+    <button id="classic-button">
+      <img src="images/classic.png" />
+      <p>Classic</p>
+    </button>
+    <button id="polymer-button">
+      <img src="images/polymer.png" />
+      <p>New</p>
+    </button>
     <script src="popup.js"></script>
   </body>
 </html>
